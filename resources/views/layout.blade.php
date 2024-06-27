@@ -9,7 +9,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">PHONE BOOK</a>
+        <a class="navbar-brand" href="{{ route('home') }}">PHONE BOOK</a>
     </div>
 </nav>
 
