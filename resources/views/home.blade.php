@@ -1,6 +1,15 @@
 @extends('layout')
 
 @section('content')
+<br>
+<div class="container-fluid">
+<form method="GET" action="{{ route('search') }}" class="d-flex">
+    <input class="form-control me-2" id="s" name="s" type="search" placeholder="Search by name">
+    <button class="btn btn-warning" type="submit">Search</button>
+</form>
+</div>
+<br>
+
 @if(count($users))
 <table class="table table-striped">
     <thead>
@@ -22,6 +31,10 @@
       @endforeach
     </tbody>
   </table>
-{{ $users->links() }}
+{{-- {{ $users->links() }} --}}
+{{ $users->appends(['s'=>request()->s])->links() }}
+<br>
+@else
+  <h3>There are no entries...</h3>
 @endif
 @endsection
