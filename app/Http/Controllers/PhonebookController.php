@@ -12,7 +12,7 @@ class PhonebookController extends Controller
         //$users = Phonebook::all();
         //$users = Phonebook::orderBy('name')->get();
         Paginator::useBootstrap();
-        $users = Phonebook::orderBy('name')->paginate(25);
+        $users = Phonebook::orderBy('name')->paginate(20)->onEachSide(5);
         return view('home', compact('users'));
     }
 
