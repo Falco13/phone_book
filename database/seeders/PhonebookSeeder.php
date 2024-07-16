@@ -13,6 +13,6 @@ class PhonebookSeeder extends Seeder
      */
     public function run(): void
     {
-        Phonebook::factory(130)->create();
+        Phonebook::factory(300)->create();
     }
 }

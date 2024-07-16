@@ -17,11 +17,11 @@ class PhonebookFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->email,
-            'phone' => fake()->e164PhoneNumber,
-            'created_at' => fake()-> dateTime(),
-            'updated_at' => fake()-> dateTime(),
+            'name' => $this->faker->name(),
+            'email' => $this->faker->email(),
+            'phone' => $this->faker->e164PhoneNumber(),
+            'created_at' => $this->faker->dateTime(),
+            'updated_at' => $this->faker->dateTime(),
         ];
     }
 }
